@@ -1,0 +1,243 @@
+.promo {
+    position: relative;
+	height: 92vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 1.719), rgba(0, 0, 0, 0.7)), url('../../img/main_bg.jpg.webp');
+    background-color:$background-color;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #777773;
+    //clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 74%, 0% 50%);
+
+    -webkit-box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
+    -moz-box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
+    box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
+    &__header {
+        position: relative;
+        background: #ecece8;
+        height: 90px;
+        border-bottom: 2px solid #777773;
+        -webkit-box-shadow: inset 0px 1px 4px 0px rgb(0 0 0 / 10%);
+        -moz-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0px 1px 4px 0px rgb(0 0 0 / 10%);
+        z-index: 10;
+    }
+    &__svg-icon {
+        display: block;
+        position: absolute;
+        left: 55px;
+        top: 7px;
+        z-index: 20;
+        svg {
+            display: block;
+            height: 75px;
+            width: 100px;
+            &:hover {
+                color:#777773;
+            }
+        }
+    }
+    &__text {
+        color: #a0a09d;
+        z-index: 1;
+        text-align: -webkit-right;
+        //margin-right: 10px;
+        margin-top: 20%;
+        
+    }
+    &__title {
+        font-size: 60px;
+        line-height: 80px;
+        margin-bottom: 10px;
+    }
+    .container {
+        max-width: 1040px;
+        margin: 0 auto;
+        a {
+            text-decoration: none;
+            font-size: 26px;
+            color: #a0a09d;
+            margin-right: 20px;
+            &:nth-child(2) {
+                margin-right: 0;
+            }
+            &:hover {
+                color: $background-color;
+                transition: all .6s;
+            }
+        }
+        
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    list-style-type: none;
+    font-size: 50px;
+    height: 100vh;
+    transition: all 1s;
+    left: -100%;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    z-index: 20;
+    &.active {
+        //position: relative;
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+        
+    }
+    &__block {
+        //left: -100%;
+        position: relative;
+        width: 550px;
+        background-image: linear-gradient(
+            90deg,
+            #1f2024f0 24%,
+            transparent 222%,
+            rgba(26, 28, 37, 0.26) 100%,
+            );
+        height: 100%;
+        transition: all .6s;
+        padding-top: 140px;
+        //padding-left: 40px;
+        z-index: 10;
+        
+    }
+    &__list {
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+        
+        a {
+            position: relative;
+            text-decoration: none;
+            color: rgb(102, 102, 84);
+            font-weight: 900;
+            font-size: 60px;
+            z-index: 3;
+            //filter: grayscale(40%);
+
+            &:hover {
+                //transform: scale(1.02) ;
+                transition: all 1s;
+                //filter: none;
+                color: white;
+            }
+            &:before {
+                content: '';
+                width: 40%;
+                height: 10px;
+                background-color:rgb(255, 255, 255);
+                position: absolute;
+                left: -45%;
+                top: 45px;
+                border-radius: 5px;
+                -webkit-transform: scalex(0);
+                -ms-transform: scaleX(0);
+                transform: scaleX(0);
+                -webkit-transform-origin: left;
+                -ms-transform-origin: left;
+                transform-origin: left;
+                -webkit-transition: -webkit-transform 0.25s;
+                transition: -webkit-transform 0,25s;
+                -o-transition: transform 0.25s;
+                transition: transform 0.25s;
+                transition: transform 0.25s, -webkit-transform 0.25s;
+            }
+            &:hover:before {
+                -webkit-transform: scaleX(1);
+                -ms-transform: scaleX(1);
+                transform: scaleX(1);
+                -webkit-transition: -webkit-transform 0.25s;
+                transition: -webkit-transform 0.25s;
+                -o-transition: transform 0,25s;
+                transition: transform 0,25s;
+                transition: transform 0,25s, -webkit-transform 0.25;
+            }
+        }
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 8 !important;
+        animation: backdrop-animation 3s ease-in-out 1s forwards;
+        animation-delay: -3s !important;
+        &.active {
+            top: 0;
+            visibility: visible;
+            opacity: 1;
+          }
+            
+    // &__overlay {
+    //     position: fixed;
+    //     top: -100%;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: 1 !important;
+    //     //animation: backdrop-animation 3s ease-in-out 1s forwards;
+    //     //animation-delay: -3s !important;
+    //     background-color: rgb(27, 36, 49);
+    //     transition: all 1s;
+            // &.active {
+            //     top: 0;
+    }
+}
+h1 {
+    text-shadow: 0px 0px 55px 32px black;  
+} 
+
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    width: 100vw;
+    min-height: 100%;
+    background:rgb(36, 33, 30);
+    z-index: 125;
+    overflow: hidden;
+    transition: 1s cubic-bezier(.3,0,.5,1);
+}
+
+.preloader-head { 
+    //padding-left: 75px;
+
+    // &__text {
+    //     position: fixed;
+    //     display: flex;
+    //     flex-direction: column;
+    //     bottom: 65px;
+    //     font-family: 'Helvetica Now Display';
+    //     color: rgb(255, 255, 255);
+    // }
+    &__svg-icon {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 130px;
+        width: 130px;
+        z-index: 10;
+        background-color: white;
+        svg {
+            height: 20px;
+            width: 20px;
+            z-index: 10;
+            color: white;
+        }
+    }
+    
+
+}

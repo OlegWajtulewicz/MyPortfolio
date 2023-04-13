@@ -1,0 +1,109 @@
+@import "libs/bootstrap-reboot.min";
+@import "libs/media_mixin";
+@import "vars";
+@import "libs/swiper-bundle.min.scss";
+@import "libs/swiper.min.scss";
+@import "libs/normalize";
+@import "libs/animate.min";
+@import "libs/variables";
+//@import url("");
+@import "libs/fonts";
+@import "libs/iconsfont";
+@import "libs/global";
+
+
+html {
+    scroll-behavior: smooth; 
+}
+body.lock {
+    overflow: hidden;
+}
+
+@import "libs/titles";
+
+
+@import "header";
+@import "sidepanel";
+@import "about";
+@import "footer";
+@import "burger";
+@import "portfolio";
+@import "skills";
+@import "slider";
+@import "contact";
+
+
+
+body {
+	font-family: 'Segoe UI';	
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d4d4d4;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #939393;
+    border-radius: 8px;
+    border: 3px solid #d4d4d4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c;
+}
+
+
+
+
+body::-webkit-scrollbar {
+    //width: 13px;
+    height: 13px;
+  }
+  
+// .vertical-scroll::-webkit-scrollbar-track {
+//     background: #d4d4d4;
+//     box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+//   }
+  
+// .vertical-scroll::-webkit-scrollbar-thumb {
+//     background: #939393;
+//     border-radius: 8px;
+//     border: 3px solid #d4d4d4;
+//   }
+  
+// .vertical-scroll::-webkit-scrollbar-thumb:hover {
+//     background: #7c7c7c;
+//   }
+  
+  /* Vertical scrolling */
+  
+// .vertical-scroll {
+//     display: grid;
+//     gap: 0.5em;
+//     grid-auto-flow: column;
+//     grid-auto-columns: 75%;
+//     padding: 0.5em;
+//     overflow-x: scroll;
+//     background: #51ac24;
+//     border-radius: 1em;
+//     position: relative;
+//   }
+  
+// .vertical-scroll > div {
+//     background: hsl(0, 44%, 46%);
+//     border-radius: 1em;
+//     border: 0.5em solid hsl(0, 51%, 25%);
+//     padding: 1em;
+//   }
+  
