@@ -4,6 +4,22 @@
     padding-bottom: 10%;
     background-color: $background-color;
     border-top: 1px solid #777773;
+    @include _1170 {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    @include _979 {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    @include _767 {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    @include _480 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
     .container {
         //border-top: 1px solid #777773;
         max-width: 1040px;
@@ -14,6 +30,15 @@
             width: 80%;
             background-color: #777773;
             margin: 0 auto 100px auto;
+            @include _979 {
+                margin-bottom: 80px;
+            }
+            @include _767 {
+                margin-bottom: 60px;
+            }
+            @include _600 {
+                margin-bottom: 40px;
+            }
         }
     }
     &__wrapper {
@@ -24,11 +49,13 @@
         margin: 0 auto;
     }
     &__title {
-        font-size: 30px;
+        font-size: 36px;
         margin-bottom: 40px;
         text-align: center;
-        font-weight: 700;
         line-height: 48px;
+        @include _480 {
+            font-size: 32px;
+        }
     }
     &__text {
         font-size: 19px;

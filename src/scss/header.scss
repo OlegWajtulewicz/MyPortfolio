@@ -2,15 +2,16 @@
     position: relative;
 	height: 92vh;
     background-image: linear-gradient(rgba(0, 0, 0, 1.719), rgba(0, 0, 0, 0.7)), url('../../img/main_bg.jpg.webp');
-    background-color:$background-color;
+    background-color: $background-color;
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid #777773;
     //clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 74%, 0% 50%);
-
+    //animation: neon-1 .1s ease-in-out infinite alternate;
     -webkit-box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
     -moz-box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
-    box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
+    //box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     &__header {
         position: relative;
         background: #ecece8;
@@ -27,6 +28,12 @@
         left: 55px;
         top: 7px;
         z-index: 20;
+        @include _767 {
+            left: 20px;
+        }
+        @include _600 {
+            left: 0;
+        }
         svg {
             display: block;
             height: 75px;
@@ -37,21 +44,66 @@
         }
     }
     &__text {
-        color: #a0a09d;
+        color: rgb(160, 160, 157);
         z-index: 1;
         text-align: -webkit-right;
-        //margin-right: 10px;
-        margin-top: 20%;
-        
+        top: 40%;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        @include _1270 {
+
+        }
     }
     &__title {
-        font-size: 60px;
-        line-height: 80px;
+        font-size: 130px;
+        line-height: 135px;
+        font-weight: 900;
         margin-bottom: 10px;
+        @include _1270 {
+            font-size: 120px;
+        }
+        @include _1170 {
+            font-size: 100px;
+            line-height: 110px;
+        }
+        @include _979 {
+            font-size: 80px;
+            line-height: 80px;
+        }
+        @include _767 {
+            font-size: 70px;
+        }
+        @include _600 {
+            font-size: 58px;
+            line-height: 60px;
+        }
+        @include _480 {
+            font-size: 42px;
+            line-height: 50px;
+        }
+        @include _350 {
+            font-size: 38px;
+        }
+    }
+    &__subtitle {
+        @include _600 {
+            font-size: 30px !important;
+        }
+        @include _480 {
+            font-size: 24px !important;
+        }
+        @include _350 {
+            font-size: 20px !important;
+        } 
     }
     .container {
         max-width: 1040px;
         margin: 0 auto;
+        .main-btn {
+           color: rgb(105, 105, 65);
+           animation: neon-1 .1s ease-in-out infinite alternate; 
+        }
         a {
             text-decoration: none;
             font-size: 26px;
@@ -117,7 +169,7 @@
         a {
             position: relative;
             text-decoration: none;
-            color: rgb(102, 102, 84);
+            color: rgb(105, 105, 65);
             font-weight: 900;
             font-size: 60px;
             z-index: 3;

@@ -1,10 +1,22 @@
 .skills {
     background-color: $background-color;
-    padding: 25px;
+    padding: 70px 0;
     
     .container {
         max-width: 1040px;
         margin: 0 auto;
+        // .titles {
+        //     display: flex;
+        //     width: 100%;
+        //     justify-content: space-between;
+        //     align-items: flex-end;
+        // }
+        .title {
+            font-size: 36px;
+            font-weight: 900;
+        }
+        
+        
     }
     &__wrapper {
         max-width: 800px;
@@ -69,8 +81,9 @@
         &-img {
             margin-bottom: 13px;
         }
-        .title {
-            margin-bottom: 5px;
+        .title_fz14 {
+            margin-bottom: 15px;
+            text-align: left;
         }
     }
     &__libs-item {
@@ -84,6 +97,10 @@
             padding-inline: 1ch;
             padding-block: 3ch;  
         }
+    }
+    &__descr {
+        font-size: 14px;
+        font-weight: 500;
     }
 }
 

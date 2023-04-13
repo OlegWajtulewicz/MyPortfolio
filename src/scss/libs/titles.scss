@@ -1,4 +1,11 @@
 .title {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 48px;
+    &__fz60 {
+        font-size: 60px;
+        font-weight: 900;
+    } 
     &_fz36 {
         font-size: 36px;
         font-weight: 900;

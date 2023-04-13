@@ -10,6 +10,26 @@
 	}
 }
 
+@mixin adaptiv-font($pcSize, $mobSize, $maxSize) {
+	$addSize: $pcSize - $mobSize;
+	@if $maxSize==1 {
+		//Только если меньше контейнера
+		font-size: $pcSize + px;
+		@media (max-width: #{$maxWidthContainer + px}) {
+			font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	} @else if $maxSize==2 {
+		//Только если больше контейнера
+		font-size: $pcSize + px;
+		@media (min-width: #{$maxWidthContainer + px}) {
+			font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	} @else {
+		//Всегда
+		font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
 @mixin bg ($size:"contain", $position: "center") {
 	background-size: #{$size};
 	background-position: #{$position};
@@ -118,4 +138,23 @@
 	100% {
 		opacity: 1;
 	}
+}
+
+@keyframes neon-1 {
+    from {
+        text-shadow: 0 0 6px rgba(95, 93, 93, 0.92),
+					0 0 12px rgba(139, 120, 120, 0.52),
+					0 0 30px rgba(116, 73, 65, 0.34),
+					0 0 21px rgba(75, 75, 73, 0.92),
+					0 0 34px rgba(97, 65, 65, 0.78),
+					0 0 54px rgba(83, 81, 81, 0.92);
+    }
+    to {
+        text-shadow: 0 0 6px rgba(100, 62, 62, 0.98),
+					0 0 30px rgba(160, 160, 157, 0.42),
+					0 0 22px rgba(68, 68, 67, 0.84),
+					0 0 38px rgba(70, 70, 70, 0.88),
+					0 0 12px rgba(90, 90, 87, 0.58),
+					0 0 60px #634343;
+    }
 }

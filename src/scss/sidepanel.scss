@@ -1,0 +1,43 @@
+.sidepanel {
+    position: fixed;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    //top: 400px;
+    //bottom: 486px;
+    transform: translateY(-50%);
+    top: 70%;
+    @include _1440 {
+        left: -40px;
+    }
+    @include _767 {
+        display: none;
+    }
+    &__divider {
+        width: 2px;
+        height: 100px;
+        background-color: #777773;
+    }
+    &__text {
+        span {
+            display: block;
+            width: 150px;
+            transform:rotate(-90deg) translate(2%,0%)
+        }
+    }
+
+    &__link {
+        font-size: 28px;
+        text-decoration: none;
+        color: #777773 !important;
+        &:hover {
+            //color: #63080b !important;
+            color: rgb(105, 105, 65) !important;
+            transition: all .6s;
+        }
+        
+    }
+}
