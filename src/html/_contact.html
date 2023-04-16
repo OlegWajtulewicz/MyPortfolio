@@ -37,22 +37,22 @@
                 Or leave your details and I will write to you myself:
             </div>
 
-            <form action="#" class="contacts__form">
-                <div class="contacts__input">
-                    <input required name="name" id="name" type="text">
-                    <label for="name">Name</label>
+            <form id="form" action="#" class="contacts__form form form__body">
+                <div class="contacts__input form__item">
+                    <input name="name" id="formName" type="text" class="form__input _req">
+                    <label for="formName" class="form__label">Name</label>
                 </div>
-                <div class="contacts__input">
-                    <input required name="email" id="email" type="email">
-                    <label id="mail" for="email">Email</label>
+                <div class="contacts__input form__item">
+                    <input name="email" id="formEmail" type="email" class="form__input _req _email">
+                    <label for="formEmail">Email</label>
                 </div>
 
-                <div class="contacts__textarea">
-                    <textarea name="text" id="text"></textarea>
-                    <label for="text">Message</label>
+                <div class="contacts__textarea form__item">
+                    <textarea name="message" id="formMessage" class="form__input"></textarea>
+                    <label for="formMessage" class="form__label">Message</label>
                 </div>
                 <div class="contacts__triggers">
-                    <button class="  main-btn">Send message</button>
+                    <button type="submit" class="main-btn form__button">Send message</button>
                     <!-- <div class="contacts__policy">
                         <input required type="checkbox">
                     <span>I agree with <a href="#policy" data-modal="policy" class="scroll-off">  the privacy policy.</a> </span>

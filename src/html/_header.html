@@ -1,11 +1,11 @@
 
-<!-- <style>
+<style>
   BODY.LOCK { overflow: hidden; }
-</style> -->
+</style>
 
-<header class="promo" id="home"> 
+<header class="promo _goto-block" id="home"> 
     <div class="promo__header"></div>
-    <div class="promo__svg-icon" id="up">
+    <div class="promo__svg-icon top" id="up">
         <!-- <img src="../img/logo1-svg-svg.png" alt=""> -->
         <a href="#">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 273" width="300" height="273">
@@ -34,13 +34,13 @@
     <div class="menu">
         <div class="menu__block">
             
-            <nav>
-                <ul class="menu__list">
-                    <li class="menu__link main-navigation_item"><a href="#home">home </a></li>
-                    <li class="menu__link main-navigation_item"><a href="#about">about</a></li>
-                    <li class="menu__link main-navigation_item"><a href="#portfolio">portfolio</a><li>
+            <nav class="menu__body">
+                <ul class="menu__list ">
+                    <li class="menu__link main-navigation_item"><a href="" class="@@if(link==1){_active}">home </a></li>
+                    <li class="menu__link main-navigation_item"><a href="#about" class="@@if(link==2){_active}">about</a></li>
+                    <li class="menu__link main-navigation_item"><a href="#" class="@@if(link==3){_active}">portfolio</a><li>
                     <!-- <li class="menu__link main-navigation_item"><a href="#price">price</a></li> -->
-                    <li class="menu__link main-navigation_item"><a href="#contacts">contact</a></li>
+                    <li class="menu__link main-navigation_item"><a href="#contact.html" class="@@if(link==4){_active}">contact</a></li>
                 </ul>
             </nav>
 

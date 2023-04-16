@@ -44,7 +44,8 @@
 			width: 700px;
 			height: 400px;
 			margin: 60px 10px 0 10px;
-			margin-left: 0;
+			margin: 60px auto 0 auto;
+			//margin-left: 0;
 			//padding-bottom: 50px;
 			img {
 				width: 100%;
@@ -54,8 +55,15 @@
 		.title_fz36 {
 			font-size: 36px;
 			font-weight: 900;
+			margin-bottom: 50px;
 		}
-    } 	
+    }
+	&__descr {
+		font-size: 19px;
+    	text-align: center;
+    	font-weight: 400;
+		
+	} 	
 }
 
 

@@ -14,7 +14,7 @@
 </head>
 	<body>
 		<div class="promo__header">
-    <div class="promo__svg-icon " id="up">
+    <div class="promo__svg-icon top" id="up">
         <!-- <img src="../img/logo1-svg-svg.png" alt=""> -->
         <a href="#">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 273" width="300" height="273">
@@ -41,13 +41,13 @@
         <div class="menu">
             <div class="menu__block">
                 
-                <nav>
-                    <ul class="menu__list">
-                        <li class="menu__link main-navigation_item"><a href="#home">home </a></li>
-                        <li class="menu__link main-navigation_item"><a href="#about">about</a></li>
-                        <li class="menu__link main-navigation_item"><a href="#portfolio">portfolio</a></li>
+                <nav class="menu__body">
+                    <ul class="menu__list menu__body">
+                        <li class="menu__link main-navigation_item"><a href="" class="">home </a></li>
+                        <li class="menu__link main-navigation_item"><a href="" class="">about</a></li>
+                        <li class="menu__link main-navigation_item"><a href="" class="">portfolio</a></li>
                         <!-- <li class="menu__link main-navigation_item"><a href="#price">price</a></li> -->
-                        <li class="menu__link main-navigation_item"><a href="#contacts">contact</a></li>
+                        <li class="menu__link main-navigation_item"><a href="" class="_active">contact</a></li>
                     </ul>
                 </nav>
     
@@ -103,22 +103,22 @@
                 Or leave your details and I will write to you myself:
             </div>
 
-            <form action="#" class="contacts__form">
-                <div class="contacts__input">
-                    <input required name="name" id="name" type="text">
-                    <label for="name">Name</label>
+            <form id="form" action="#" class="contacts__form form form__body">
+                <div class="contacts__input form__item">
+                    <input name="name" id="formName" type="text" class="form__input _req">
+                    <label for="formName" class="form__label">Name</label>
                 </div>
-                <div class="contacts__input">
-                    <input required name="email" id="email" type="email">
-                    <label id="mail" for="email">Email</label>
+                <div class="contacts__input form__item">
+                    <input name="email" id="formEmail" type="email" class="form__input _req _email">
+                    <label for="formEmail">Email</label>
                 </div>
 
-                <div class="contacts__textarea">
-                    <textarea name="text" id="text"></textarea>
-                    <label for="text">Message</label>
+                <div class="contacts__textarea form__item">
+                    <textarea name="message" id="formMessage" class="form__input"></textarea>
+                    <label for="formMessage" class="form__label">Message</label>
                 </div>
                 <div class="contacts__triggers">
-                    <button class="  main-btn">Send message</button>
+                    <button type="submit" class="main-btn form__button">Send message</button>
                     <!-- <div class="contacts__policy">
                         <input required type="checkbox">
                     <span>I agree with <a href="#policy" data-modal="policy" class="scroll-off">  the privacy policy.</a> </span>
@@ -161,7 +161,8 @@
 
 </footer>
 
-		<!-- <script src="../js/swiper-bundle.min.js"></script> -->
+		<!DOCTYPE html>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- <script src="../js/modules/swiper.min.js"></script> -->
 
@@ -170,8 +171,11 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsicrCLCWQmu8DQqoSw_pu0yAD0LvjR58&callback=initMap">
 </script>
 
+
 <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTJZsAsqhEwZz9wqVMZZGhL1aN9yn4eE"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 <script src="../js/app.min.js"></script>
 	</body>
 </html>
