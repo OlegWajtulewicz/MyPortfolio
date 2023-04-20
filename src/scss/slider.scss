@@ -1,11 +1,37 @@
 .slider {
     background-color: $background-color;
 	padding: 50px;
-	min-height: 100vh;
+	padding-top: 70px;
+	padding-bottom: 100px;
+	min-height: 90vh;
+	border-bottom: 1px solid #77777354;
+    -moz-box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
+    box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
+	@include _979 {
+		padding-bottom: 20%;	
+	}
+	@include _767 {
+		padding-bottom: 25%;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@include _600 {
+		height: 71rem;
+	}
+	@include _480 {
+		padding-bottom: 45%;
+		padding-left: 15px;
+		padding-right: 15px;
+		height: 73rem;
+	}
+	@include _400 {
+		height: 80rem;
+	}
+	
     .container {
       	max-width: 1040px;
       	margin: 0 auto;
-		min-height: 150vh;
+		height: 930px;
 		//position: relative;
 		//padding-bottom: 50px;
 		// .divider {
@@ -41,15 +67,15 @@
 			}
 		}
 		.slider-container {
-			width: 700px;
-			height: 400px;
+			width: 900px;
 			margin: 60px 10px 0 10px;
 			margin: 60px auto 0 auto;
-			//margin-left: 0;
-			//padding-bottom: 50px;
+			@include _979 {
+				width: 100%;
+			}
 			img {
 				width: 100%;
-				max-height: 400px;
+				max-height: 500px;
 			}
 		}
 		.title_fz36 {
@@ -83,9 +109,22 @@
 
 .swiper {
 	&-container {
-		width: 700px;
+		width: 900px;
 		padding-bottom: 50px;
-		//background-attachment: fixed;
+		@include _979 {
+			width: 100%;
+			//padding-bottom: 15%;
+		}
+		@include _870 {
+			padding-bottom: 5%;
+		}
+		@include _767 {
+			padding-bottom: 0;
+		}
+		@include _480 {
+			padding-bottom: 5%;
+		}
+		
 	}
 	&__pag {
 		counter-reset: pag;

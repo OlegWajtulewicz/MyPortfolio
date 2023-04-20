@@ -1,6 +1,6 @@
 .about {
     padding: 230px;
-    padding-top: 7%;
+    padding-top: 70px;
     padding-bottom: 10%;
     background-color: $background-color;
     border-top: 1px solid #777773;
@@ -11,10 +11,12 @@
     @include _979 {
         padding-left: 15%;
         padding-right: 15%;
+        padding-top: 10%;
     }
     @include _767 {
         padding-left: 10%;
         padding-right: 10%;
+        padding-top: 15%;
     }
     @include _480 {
         padding-left: 5%;
@@ -58,9 +60,12 @@
         }
     }
     &__text {
-        font-size: 19px;
+        font-size: 24px;
         text-align: center;
         font-weight: 400;
+        @include _600 {
+            font-size: 19px;
+        }
     }
     // &:before {
     //     display: block;

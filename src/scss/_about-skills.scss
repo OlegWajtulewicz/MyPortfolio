@@ -1,0 +1,83 @@
+.about-skills {
+    position: relative;
+    background-color: #ededeb;
+    padding: 50px;
+    padding-top: 80px;
+    @include _600 {
+        padding: 20px;
+        padding-top: 80px;
+    }
+    @include _400 {
+        padding: 5px;
+        padding-top: 80px;
+    }
+    .container {
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+
+        @include _979 {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 50px;
+        }
+        @include _480 {
+            padding: 15px;
+        }
+    }
+    &__item {
+        width: 450px;
+        height: 350px;
+        padding: 30px;
+        text-align: center;
+        background-color: #e2e2de;
+        border-radius: 4px;
+        box-shadow: 0px 0px 13px -1px rgb(197, 196, 197);
+        @include _600 {
+            width: 100%;
+            min-height: 350px;
+            padding: 30px 5px;
+        }
+        @include _480 {
+            padding: 10px;
+        }
+        li {
+          list-style-type: none;
+          font-weight: 500; 
+          line-height: 30px; 
+        }
+        ul {
+            padding: 0;
+        }
+    }
+    &__title {
+        font-weight: 700 !important;
+        margin-bottom: 10px;
+    }
+
+    &__descr {
+        margin-bottom: 10px;
+        font-weight: 500;
+        @include _400 {
+            margin-bottom: 0;
+        }
+    }
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    &__text {
+        max-width: 560px;
+        font-size: 19px;
+        line-height: 35px;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 auto;
+        padding: 90px 30px;
+    }
+}

@@ -13,12 +13,7 @@
 @import "libs/mixins.scss";
 
 
-html {
-    scroll-behavior: smooth; 
-}
-body.lock {
-    overflow: hidden;
-}
+
 
 @import "libs/titles";
 
@@ -26,6 +21,7 @@ body.lock {
 @import "header";
 @import "sidepanel";
 @import "about";
+@import "about-skills";
 @import "footer";
 @import "burger";
 @import "portfolio";
@@ -42,6 +38,13 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+body.lock {
+    overflow: hidden;
 }
 
 

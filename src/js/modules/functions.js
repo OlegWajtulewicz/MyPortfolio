@@ -18,19 +18,34 @@ export function isWebp() {
 
 //preloader
 $(window).on('load', function() {
-    $('#preloader').delay(1).fadeOut(1500, function() {
+    $('#preloader').delay(1).fadeOut(500, function() {
         $('body').css('overflow','visible');
         $(this).remove();
     });
 });
 
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 500) {
+    if ($(this).scrollTop() > 600) {
     $('.pageup').fadeIn();
     } else {
     $('.pageup').fadeOut();
     }
 }); 
+
+//smooth scrolling to all links
+$(document).ready(function(){
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        let hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+          window.location.hash = hash;
+        });
+      } 
+    });
+  });
 
 
 // window.onload = function(){
@@ -49,43 +64,87 @@ $(window).scroll(function() {
 // 	}
 // })
 
+// window.addEventListener('DOMContentLoaded', () => {
+//     const menu = document.querySelector('.menu'),
+//           menuItem = document.querySelectorAll('.menu__link'),
+//           burger = document.querySelector('.burger'),
+//           body = document.querySelector('body'),
+//           close = document.querySelector('.menu__overlay');
+//         //   social = document.querySelector('.menu__social'),
+//         //   closeAnimate = document.querySelector('.close');
+       
+//         // const disScroll = () => {
+//         //   let pagePosition = window.scrollY;
+//         //   document.body.classList.add('dis-scroll');
+//         //   document.body.dataset.position = pagePosition;
+//         //   document.body.style.top = -pagePosition + 'px';
+//         // }
+        
+//         // const enScroll = () => {
+//         //   let pagePosition = parseInt(document.body.dataset.position, 10);
+//         //   document.body.style.top = 'auto';
+//         //   document.body.classList.remove('dis-scroll');
+//         //   window.scrollTo({
+//         //     top: pagePosition,
+//         //     left: 0
+//         //   });
+//         //   document.body.removeAttribute('data-position');
+//         // }
+
+//           burger.addEventListener('click', () => {
+//             burger.classList.toggle('active');
+//             menu.classList.toggle('active');
+//             //close.classList.toggle('active');
+//             body.classList.toggle('lock');
+//             // if (burger.classList.contains('burger active')) {
+//             //   disScroll();
+//             // } else {
+//             //   enScroll();
+//             // } 
+//         });
+    
+//         menuItem.forEach(item => {
+//           item.addEventListener('click', () => {
+//                 burger.classList.toggle('active');
+//                 menu.classList.toggle('active');
+//                 //close.classList.toggle('active');
+//                 body.classList.toggle('lock');
+//             });
+//         close.addEventListener('click', () => {
+//                 burger.classList.remove('active');
+//                 menu.classList.remove('active');
+//                 body.classList.remove('lock');
+//                 //close.classList.toggle('active');
+//             }); 
+//         // social.addEventListener('click', () => {
+//         //         burger.classList.remove('active');
+//         //         menu.classList.remove('active');
+//         //         body.classList.remove('lock');
+//         //     });  
+        
+        
+//         // $(document).ready(function() {
+//         //     $('header__burger').click(function(event) {
+//         //       $('header__burger, .header__menu').toggleClass('active');
+//         //       $('body').toggleClass('lock');
+//         //     });
+//         //   });
+//             })})
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
           menuItem = document.querySelectorAll('.menu__link'),
           burger = document.querySelector('.burger'),
           body = document.querySelector('body'),
           close = document.querySelector('.menu__overlay');
-        //   social = document.querySelector('.menu__social'),
-        //   closeAnimate = document.querySelector('.close');
-       
-        // const disScroll = () => {
-        //   let pagePosition = window.scrollY;
-        //   document.body.classList.add('dis-scroll');
-        //   document.body.dataset.position = pagePosition;
-        //   document.body.style.top = -pagePosition + 'px';
-        // }
-        
-        // const enScroll = () => {
-        //   let pagePosition = parseInt(document.body.dataset.position, 10);
-        //   document.body.style.top = 'auto';
-        //   document.body.classList.remove('dis-scroll');
-        //   window.scrollTo({
-        //     top: pagePosition,
-        //     left: 0
-        //   });
-        //   document.body.removeAttribute('data-position');
-        // }
-
+      
+  
           burger.addEventListener('click', () => {
             burger.classList.toggle('active');
             menu.classList.toggle('active');
-            //close.classList.toggle('active');
             body.classList.toggle('lock');
-            // if (burger.classList.contains('burger active')) {
-            //   disScroll();
-            // } else {
-            //   enScroll();
-            // } 
         });
     
         menuItem.forEach(item => {
@@ -98,27 +157,9 @@ window.addEventListener('DOMContentLoaded', () => {
         close.addEventListener('click', () => {
                 burger.classList.remove('active');
                 menu.classList.remove('active');
-                body.classList.remove('lock');
-                //close.classList.toggle('active');
+                body.classList.remove('lock');  
             }); 
-        // social.addEventListener('click', () => {
-        //         burger.classList.remove('active');
-        //         menu.classList.remove('active');
-        //         body.classList.remove('lock');
-        //     });  
-        
-        
-        // $(document).ready(function() {
-        //     $('header__burger').click(function(event) {
-        //       $('header__burger, .header__menu').toggleClass('active');
-        //       $('body').toggleClass('lock');
-        //     });
-        //   });
-            })})
-
-
-
-           
+            })}) 
 
             
            

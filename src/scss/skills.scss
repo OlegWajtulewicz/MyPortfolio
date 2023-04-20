@@ -1,20 +1,36 @@
 .skills {
-    background-color: $background-color;
-    padding: 70px 0;
+    background-color: #ededeb;
+    padding: 70px 15px 0 15px;
     
     .container {
         max-width: 1040px;
         margin: 0 auto;
-        // .titles {
-        //     display: flex;
-        //     width: 100%;
-        //     justify-content: space-between;
-        //     align-items: flex-end;
-        // }
+        @include _1270 {
+            max-width: 1045px;
+        }
+        @include _1170 {
+            max-width: 850px;
+        }
+        @include _979 {
+            max-width: 705px;
+        }
+        @include _767 {
+            max-width: 550px;
+        }
+        @include _600 {
+            max-width: 445px;
+        }
+        @include _480 {
+            max-width: 325px;
+        }
         .title {
             font-size: 36px;
             font-weight: 900;
+            @include _767 {
+                margin-bottom: 40px;
+            }
         }
+
         
         
     }
@@ -26,6 +42,12 @@
         grid-template-rows: 400px;
         justify-content: space-between;
         gap: 50px;
+        @include _979 {
+            gap: 0;
+        }
+        @include _767 {
+            display: none;
+        }
     }
     &__item {
         border: 1px solid #777773;
@@ -75,9 +97,18 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(300px, 1fr));
         place-content: center;
+        gap: 20px;
         //place-items: start;
         padding: 5vmin;
         padding-bottom: 80px;
+        @include _979 {
+            grid-template-columns: 300px;
+            grid-auto-rows: 300px;
+            row-gap: 50px;  
+        }
+        @include _350 {
+            padding-left: 37px;
+        }
         &-img {
             margin-bottom: 13px;
         }
@@ -90,6 +121,10 @@
         width: 300px;
         height: 300px;
         padding-inline: 1ch;
+        padding: 0 25px;
+        background-color: #e2e2de;
+        border-radius: 4px;
+        box-shadow: 0px 0px 13px -1px rgb(197, 196, 197);
         &:nth-child(1) {
             padding-block: 15px;
         }
@@ -97,10 +132,13 @@
             padding-inline: 1ch;
             padding-block: 3ch;  
         }
+        @include _350 {
+            width: 280px;    
+        }
     }
     &__descr {
-        font-size: 14px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 400;
     }
 }
 

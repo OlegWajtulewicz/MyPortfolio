@@ -1,13 +1,31 @@
 .portfolio {
     background-color: $background-color;
-    padding: 70px 0;
-    border-bottom: 1px solid #777773;
+    padding: 70px 15px 100px 15px;
+    border-bottom: 1px solid #77777354;
     -webkit-box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
     -moz-box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
     box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
     .container {
         max-width: 1040px;
         margin: 0 auto;
+        @include _1270 {
+            max-width: 1045px;
+        }
+        @include _1170 {
+            max-width: 850px;
+        }
+        @include _979 {
+            max-width: 705px;
+        }
+        @include _767 {
+            max-width: 550px;
+        }
+        @include _600 {
+            max-width: 445px;
+        }
+        @include _480 {
+            max-width: 325px;
+        }
         .titles {
             display: flex;
             width: 100%;
@@ -22,14 +40,35 @@
         grid-template: repeat(2, 250px) / repeat(4, 250px);
         grid-auto-rows: 250px;
         gap: 10px;
+        @include _1270 {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 35px;
+        }
+        @include _480 {
+            margin-top: 50px;
+            row-gap: 20px;
+        }
+        @include _350 {
+            padding-bottom: 30px;
+        }
        
         .vertical {
             grid-row: 1 / 3;
-            grid-column: 4 / 5;    
+            grid-column: 4 / 5;
+            @include _1270 {
+                grid-row: unset;
+                grid-column: unset;
+            }    
         }
         .horizontal {
             grid-row: 2 / 3;
             grid-column: 2 / 4;
+            @include _1270 {
+                grid-row: unset;
+                grid-column: unset;
+            }
         }
     }
     &__item { 

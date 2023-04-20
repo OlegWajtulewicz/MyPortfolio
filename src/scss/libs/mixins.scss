@@ -140,21 +140,18 @@
 	}
 }
 
-@keyframes neon-1 {
+@keyframes neon-2 {
     from {
-        text-shadow: 0 0 6px rgba(95, 93, 93, 0.92),
-					0 0 12px rgba(139, 120, 120, 0.52),
-					0 0 30px rgba(116, 73, 65, 0.34),
-					0 0 21px rgba(75, 75, 73, 0.92),
-					0 0 34px rgba(97, 65, 65, 0.78),
-					0 0 54px rgba(83, 81, 81, 0.92);
+        text-shadow: 0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 15px #ffffff,
+        0 0 20px #f9ffbf;
     }
     to {
-        text-shadow: 0 0 6px rgba(100, 62, 62, 0.98),
-					0 0 30px rgba(160, 160, 157, 0.42),
-					0 0 22px rgba(68, 68, 67, 0.84),
-					0 0 38px rgba(70, 70, 70, 0.88),
-					0 0 12px rgba(90, 90, 87, 0.58),
-					0 0 60px #634343;
+        text-shadow: 0 0 20px #f9ffbf,
+        0 0 35px #fffebf,
+        0 0 40px #fff9bf,
+        0 0 50px #fbffbf,
+        0 0 800px #f9ffbf;
     }
 }
