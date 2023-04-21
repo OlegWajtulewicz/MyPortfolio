@@ -59,6 +59,7 @@
         font-size: 130px;
         line-height: 135px;
         font-weight: 900;
+        font-family: 'Filson Pro' !important;
         margin-bottom: 10px;
         @include _1270 {
             font-size: 120px;
@@ -87,6 +88,7 @@
         }
     }
     &__subtitle {
+        margin-bottom: 30px;
         @include _600 {
             font-size: 30px !important;
         }

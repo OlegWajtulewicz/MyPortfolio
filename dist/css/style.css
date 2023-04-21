@@ -5666,31 +5666,65 @@ template {
 }
 
 @font-face {
-  font-family: "Proxima Nova Semibold";
+  font-family: HelveticaNowDisplay;
   font-display: swap;
-  src: url("../ProximaNova-Semibold.woff") format("woff");
+  src: url("../fonts/HelveticaNowDisplay-Bold.woff2") format("woff2"), url("../fonts/HelveticaNowDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNowDisplay;
+  font-display: swap;
+  src: url("../fonts/HelveticaNowDisplay-Medium.woff2") format("woff2"), url("../fonts/HelveticaNowDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: icomoon;
+  font-display: swap;
+  src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ProximaNova;
+  font-display: swap;
+  src: url("../fonts/ProximaNova-Extrabld.woff2") format("woff2"), url("../fonts/ProximaNova-Extrabld.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ProximaNova;
+  font-display: swap;
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: ProximaNova;
+  font-display: swap;
+  src: url("../fonts/ProximaNova-Semibold.woff2") format("woff2"), url("../fonts/ProximaNova-Semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Proxima Nova Regular";
+  font-family: ProximaNovaCond;
   font-display: swap;
-  src: url("../ProximaNova-Regular.woff") format("woff");
+  src: url("../fonts/ProximaNovaCond-Extrabld.woff2") format("woff2"), url("../fonts/ProximaNovaCond-Extrabld.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Proxima Nova Extra Bold";
+  font-family: Filson Pro;
   font-display: swap;
-  src: url("../ProximaNova-Extrabld.woff") format("woff");
-  font-weight: 800;
+  src: url("../fonts/FilsonPro-Black.woff2") format("woff2"), url("../fonts/FilsonPro-Black.woff") format("woff");
+  font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: "Proxima Nova Condensed Extra Bold";
-  font-display: swap;
-  src: url("../ProximaNovaCond-Extrabld.woff") format("woff");
-  font-weight: 400;
+  font-family: Filson Pro;
+  src: local("../fonts/Filson Pro Black"), local("FilsonPro-Black"), url("../fonts/FilsonPro-Black.woff2") format("woff2");
+  font-weight: 900;
   font-style: normal;
 }
 @font-face {
@@ -6054,6 +6088,7 @@ h6 {
   font-size: 130px;
   line-height: 135px;
   font-weight: 900;
+  font-family: "Filson Pro" !important;
   margin-bottom: 10px;
 }
 @media (max-width: 1270px) {
@@ -6094,6 +6129,9 @@ h6 {
   .promo__title {
     font-size: 38px;
   }
+}
+.promo__subtitle {
+  margin-bottom: 30px;
 }
 @media (max-width: 600px) {
   .promo__subtitle {
@@ -7131,6 +7169,7 @@ a:active {
 .slider .container .slider-container img {
   width: 100%;
   max-height: 500px;
+  object-fit: cover;
 }
 .slider .container .title_fz36 {
   font-size: 36px;

@@ -47,3 +47,25 @@
 	font-weight: 400;
 	font-style: normal;
 }
+@font-face {
+	font-family: Filson Pro;
+	font-display: swap;
+	src: url("../fonts/FilsonPro-Black.woff2") format("woff2"), url("../fonts/FilsonPro-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+}
+
+// @font-face {
+//     font-family: Filson Pro;
+//     src: local('../fonts/Filson Pro Regular'), local('Filson-Pro-Regular'),
+//         url('../fonts/FilsonPro-Regular.woff2') format('woff2');
+//     //font-weight: 400;
+//     font-style: normal;
+// }
+@font-face {
+    font-family: Filson Pro;
+    src: local('../fonts/Filson Pro Black'), local('FilsonPro-Black'),
+        url('../fonts/FilsonPro-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
