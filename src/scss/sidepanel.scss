@@ -19,7 +19,7 @@
     &__divider {
         width: 2px;
         height: 100px;
-        background-color: #777773;
+        background-color: #a9a940;
     }
     &__text {
         span {
@@ -32,10 +32,10 @@
     &__link {
         font-size: 28px;
         text-decoration: none;
-        color: #777773 !important;
+        color: #a9a940 !important;
         &:hover {
             //color: #63080b !important;
-            color: rgb(129, 129, 59) !important;
+            color: rgb(211, 211, 206) !important;
             transition: all .6s;
         }
         

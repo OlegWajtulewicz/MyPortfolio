@@ -10,17 +10,17 @@
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://metatags.io/">
+	<meta property="og:url" content="https://vaitulevichaleh.com">
 	<meta property="og:title" content="Front-end Development, UI/UX Design">
-	<meta property="og:description" content="">
-	<meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+	<meta property="og:description" content="Portfolio">
+	<meta property="og:image" content="https://vaitulevichaleh.com/PortfolioMy.PNG">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://metatags.io/">
+	<meta property="twitter:url" content="https://vaitulevichaleh.com">
 	<meta property="twitter:title" content="Front-end Development, UI/UX Design">
-	<meta property="twitter:description" content="">
-	<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+	<meta property="twitter:description" content="Portfolio">
+	<meta property="twitter:image" content="https://vaitulevichaleh.com/PortfolioMy.PNG">
 
 	<!-- Favicon  -->
 	<link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
@@ -41,11 +41,13 @@
 	<meta name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
+	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 	<body>
-		<div class="promo__header top" id="up">
-    <div class="promo__svg-icon top" >
+		<div class="promo__header top" id="header">
+    <div class="promo__svg-icon " id="up">
         <!-- <img src="../img/logo1-svg-svg.png" alt=""> -->
         <a href="https://vaitulevichaleh.com">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 273" width="300" height="273">
@@ -90,8 +92,11 @@
             <span>MENU</span>
             <i class="burger__item"></i>
         </b>
-        
-</div>
+    </div>
+    <!-- theme change icon  -->
+    <div class="theme-change">
+        <i class="icon-icon_sun icon-moon-solid" id="themeChangeIcon"></i>
+    </div>
 </div>
 		<aside class="sidepanel">
     <a href="https://www.facebook.com/aleh.vajtulevich" class="sidepanel__link icon-facebook-1"></a>
@@ -125,7 +130,7 @@
             </a>
 
             <a href="https://test.prengi.vaitulevichaleh.com" class="portfolio__item">
-                <img src="img/works/prengi!.jpg" alt="bread">
+                <img src="img/works/prengi!.jpg" alt="prengi">
             </a>
 
             <a href="" class="portfolio__item vertical">
@@ -136,8 +141,8 @@
                 <img src="img/works/ipad.jpg" alt="ipad">
             </a>
 
-            <a href="https://vaitulevichaleh.com/" class="portfolio__item horizontal">
-                <img src="img/works/main_logo.jpg" alt="mac">
+            <a href="https://test.portfolio.vaitulevichaleh.com" class="portfolio__item horizontal">
+                <img src="img/works/main_logo.jpg" alt="portfolio">
             </a>
         </div>
     </div>
@@ -198,19 +203,19 @@
             </div>
 
             <div class="skills__libs">
-                <div class="skills__libs-item">
+                <div class="skills__libs-item" data-aos="fade-right" data-aos-duration="2000">
                     <img src="../img/skills/jquery.svg" alt="jq" class="skills__libs-img">
                     <h4 class="title_fz14">Jquery</h4>
                     <div class="skills__descr">The Jquery library will speed up development. We will not integrate it into the project without the need, but the skill of working with it is present</div>
                 </div>
 
-                <div class="skills__libs-item">
+                <div class="skills__libs-item" data-aos="fade-up" data-aos-duration="2000">
                     <img src="../img/skills/react.svg" alt="">
                     <h4 class="title_fz14">React</h4>
                     <div class="skills__descr">This library allows you to create web applications. We can create the most interactive product exactly for your purposes</div>
                 </div>
 
-                <div class="skills__libs-item">
+                <div class="skills__libs-item" data-aos="fade-left" data-aos-duration="2000">
                     <img src="../img/skills/node.js.svg" alt="">
                     <h4 class="title_fz14">Node.js</h4>
                     <div class="skills__descr">This platform allows you to create a backend for your product - “brains” that will perform actions that the user does not see</div>
@@ -250,9 +255,10 @@
 
 
 		
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- <script src="../js/modules/swiper.min.js"></script> -->
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsicrCLCWQmu8DQqoSw_pu0yAD0LvjR58&callback=initMap"></script>
+<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsicrCLCWQmu8DQqoSw_pu0yAD0LvjR58&callback=initMap"></script> -->
 <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTJZsAsqhEwZz9wqVMZZGhL1aN9yn4eE"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

@@ -1,4 +1,93 @@
-
-:roots {
+:root {
     --swiper-slider-speed: 500; 
+
+    /* colors  */
+    --background-color:#f1f1ef;
+    --background2-color:#ededeb; 
+    --footer-color: #ecece8;
+    --footer-a-color: #333333;
+    --text-color: #212529;
+    --item-color: #e2e2de;
+    --link-color: #81813b;
+    --main-btnBackg: #c7c7c742;
+    --textarea-color: #fafafa;
+    --mail-color: #4b483e;
+    --swiper-arrow: #212529;
+    --swiper-pag: rgba(0, 0, 0, 0.62);
+    --swiper-bar: rgba(116, 116, 116, 0.62);
+
+
+}.dark-theme {
+    /* colors  */
+    --background-color:#1f1f1f;
+    --background2-color:#1d1d1d; 
+    --footer-color: #000000;
+    --footer-a-color: #ededeb;
+    --text-color: #f1f1ef;
+    --item-color: #696969;
+    --link-color: #81813b;
+    --main-btnBackg: #3d3c3896;
+    --textarea-color: #696969;
+    --mail-color: #ededeb;
+    --swiper-arrow: #f8f8f8;
+    --swiper-arrow-hov: #212529;
+    --swiper-pag: rgba(129, 129, 129, 0.62);
+    --swiper-bar: rgba(116, 116, 116, 0.62);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color:#1f1f1f;
+        --background2-color:#1d1d1d; 
+        --footer-color: #000000;
+        --footer-a-color: #ededeb;
+        --text-color: #f1f1ef;
+        --item-color: #696969;
+        --link-color: #81813b;
+        --main-btnBackg: #3d3c3896;
+        --textarea-color: #696969;
+        --mail-color: #ededeb;
+        --swiper-arrow: #f8f8f8;
+        --swiper-arrow-hov: #212529;
+        --swiper-pag: rgba(129, 129, 129, 0.62);
+        --swiper-bar: rgba(116, 116, 116, 0.62);
+    }
+}
+
+
+
+
+
+[data-theme="light"] {
+    /* light  */
+    --background-color:#f1f1ef;
+    --background2-color:#ededeb; 
+    --footer-color: #ecece8;
+    --footer-a-color: #333333;
+    --text-color: #212529;
+    --item-color: #e2e2de;
+    --link-color: #81813b;
+    --main-btnBackg: #c7c7c742;
+    --textarea-color: #fafafa;
+    --mail-color: #4b483e;
+    --swiper-arrow: #212529;
+    --swiper-pag: rgba(0, 0, 0, 0.62);
+    --swiper-bar: rgba(116, 116, 116, 0.62);
+}
+:root[theme="dark"] {
+    /* dark  */
+    --background-color:#1f1f1f;
+    --background2-color:#1d1d1d; 
+    --footer-color: #000000;
+    --footer-a-color: #ededeb;
+    --text-color: #f1f1ef;
+    --item-color: #696969;
+    --link-color: #81813b;
+    --main-btnBackg: #3d3c3896;
+    --textarea-color: #696969;
+    --mail-color: #ededeb;
+    --swiper-arrow: #f8f8f8;
+    --swiper-arrow-hov: #212529;
+    --swiper-pag: rgba(129, 129, 129, 0.62);
+    --swiper-bar: rgba(116, 116, 116, 0.62);
 }

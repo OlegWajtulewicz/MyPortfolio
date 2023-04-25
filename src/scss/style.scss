@@ -28,11 +28,13 @@
 @import "skills";
 @import "slider";
 @import "contact";
+@import "dark-theme";
 
 
 
 body {
-	font-family: 'Segoe UI';	
+	font-family: 'Segoe UI';
+    color: var(--text-color);	
 }
 
 
@@ -46,6 +48,7 @@ html {
 body.lock {
     overflow: hidden;
 }
+
 
 
 ::-webkit-scrollbar {

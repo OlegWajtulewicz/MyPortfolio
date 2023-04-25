@@ -10,17 +10,17 @@
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://metatags.io/">
+	<meta property="og:url" content="https://vaitulevichaleh.com">
 	<meta property="og:title" content="Front-end Development, UI/UX Design">
-	<meta property="og:description" content="">
-	<meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+	<meta property="og:description" content="Portfolio">
+	<meta property="og:image" content="https://vaitulevichaleh.com/PortfolioMy.PNG">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://metatags.io/">
+	<meta property="twitter:url" content="https://vaitulevichaleh.com">
 	<meta property="twitter:title" content="Front-end Development, UI/UX Design">
-	<meta property="twitter:description" content="">
-	<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+	<meta property="twitter:description" content="Portfolio">
+	<meta property="twitter:image" content="https://vaitulevichaleh.com/PortfolioMy.PNG">
 
 	<!-- Favicon  -->
 	<link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
@@ -41,11 +41,13 @@
 	<meta name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
+	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 	<body>
-		<div class="promo__header top" id="up">
-    <div class="promo__svg-icon top" >
+		<div class="promo__header top" id="header">
+    <div class="promo__svg-icon " id="up">
         <!-- <img src="../img/logo1-svg-svg.png" alt=""> -->
         <a href="https://vaitulevichaleh.com">
             <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 273" width="300" height="273">
@@ -90,8 +92,11 @@
             <span>MENU</span>
             <i class="burger__item"></i>
         </b>
-        
-</div>
+    </div>
+    <!-- theme change icon  -->
+    <div class="theme-change">
+        <i class="icon-icon_sun icon-moon-solid" id="themeChangeIcon"></i>
+    </div>
 </div>
 		<aside class="sidepanel">
     <a href="https://www.facebook.com/aleh.vajtulevich" class="sidepanel__link icon-facebook-1"></a>
@@ -113,11 +118,11 @@
         <!-- <div class="title_fz24 title__section-subtitle">a few words about me
         </div> -->
 
-        <div class="slider__descr"> <p style="text-indent: 35px;"> Greetings! I am a musician and percussionist who has always strived for perfection and new challenges. Music is my calling, my passion, and a source of inspiration.</p> 
-          <p style="text-indent: 25px;">Some time ago, I started exploring front-end development and found a new passion that allowed me to unlock new creative abilities. Front-end development enables me to bring my ideas to life, create beautiful and functional websites and applications that are not only aesthetically appealing, but also easy to use. </p>
-          <p style="text-indent: 25px;"> While I continue to play percussion, I am constantly amazed at how music and development interact, allowing me to find new ways to express my thoughts and ideas.</p> 
+        <div class="slider__descr"> <div style="text-indent: 35px;" data-aos="fade-up"> Greetings! I am a musician and percussionist who has always strived for perfection and new challenges. Music is my calling, my passion, and a source of inspiration.</div> 
+          <div style="text-indent: 25px;" data-aos="fade-up">Some time ago, I started exploring front-end development and found a new passion that allowed me to unlock new creative abilities. Front-end development enables me to bring my ideas to life, create beautiful and functional websites and applications that are not only aesthetically appealing, but also easy to use. </p>
+          <div style="text-indent: 25px;" data-aos="fade-up"> While I continue to play percussion, I am constantly amazed at how music and development interact, allowing me to find new ways to express my thoughts and ideas.</div> 
           
-           <p style="text-indent: 25px;"> I am committed and ready for new challenges in both of my passions - music and web development.</p></div>
+           <div style="text-indent: 25px;" data-aos="fade-up"> I am committed and ready for new challenges in both of my passions - music and web development.</div></div>
 
         
 
@@ -158,7 +163,7 @@
 		<section class="about-skills">
     <div class="container">
         <div class="about-skills__wrapper">
-            <div class="about-skills__item">
+            <div class="about-skills__item" data-aos="fade-right" data-aos-duration="2000">
                 <div class="title_fz36 about-skills__title">Designer</div>
                 <div class="about-skills__descr">
                     I value simple content structure, clean design patterns, and thoughtful interactions.
@@ -172,7 +177,7 @@
                 </ul>
             </div>
 
-            <div class="about-skills__item">
+            <div class="about-skills__item" data-aos="fade-left" data-aos-duration="2000">
                 <div class="title_fz36 about-skills__title">Frontend Developer</div>
                 <div class="about-skills__descr">
                     I like to code things from scratch, and enjoy bringing ideas to life in the browser.
@@ -188,13 +193,13 @@
         </div>
 
         <div class="about-skills__text">
-            <p style="text-indent: 35px;">I use HTML & CSS (usually Sass) every day, and I try to keep up with the latest features while maintaining graceful degradation. Accessibility is a priority for me from the outset.</p>
+            <p style="text-indent: 35px;" data-aos="fade-up" data-aos-duration="2000">I use HTML & CSS (usually Sass) every day, and I try to keep up with the latest features while maintaining graceful degradation. Accessibility is a priority for me from the outset.</p>
             
-            <p style="text-indent: 25px;">I use JavaScript. I also run Node.js-based workflow automation via Gulp for web projects, and I’ve written other Node scripts to automate mundane tasks.</p>
+            <p style="text-indent: 25px;" data-aos="fade-up" data-aos-duration="2000">I use JavaScript. I also run Node.js-based workflow automation via Gulp for web projects, and I’ve written other Node scripts to automate mundane tasks.</p>
             
-            <p style="text-indent: 25px;">I use Git for all of my programming work. Check out my GitHub page for random projects and contributions to other open source projects.</p>
+            <p style="text-indent: 25px;" data-aos="fade-up" data-aos-duration="2000">I use Git for all of my programming work. Check out my GitHub page for random projects and contributions to other open source projects.</p>
             
-            <p style="text-indent: 25px;">I use Git for all of my programming work. Check out my GitHub page for random projects and contributions to other open source projects.</p>
+            <p style="text-indent: 25px;" data-aos="fade-up" data-aos-duration="2000">I use Git for all of my programming work. Check out my GitHub page for random projects and contributions to other open source projects.</p>
             
         </div>
 
@@ -232,9 +237,10 @@
 
 
 		
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- <script src="../js/modules/swiper.min.js"></script> -->
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsicrCLCWQmu8DQqoSw_pu0yAD0LvjR58&callback=initMap"></script>
+<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsicrCLCWQmu8DQqoSw_pu0yAD0LvjR58&callback=initMap"></script> -->
 <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTJZsAsqhEwZz9wqVMZZGhL1aN9yn4eE"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

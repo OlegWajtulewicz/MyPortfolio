@@ -2,7 +2,7 @@
     padding: 230px;
     padding-top: 70px;
     padding-bottom: 10%;
-    background-color: $background-color;
+    background-color: var(--background-color);
     border-top: 1px solid #777773;
     @include _1170 {
         padding-left: 15%;

@@ -1,0 +1,23 @@
+.theme-change {
+    position: relative; 
+    top: 27px;
+    font-size: 26px;
+    cursor: pointer;
+    i {
+        position: absolute;
+        right: 180px;
+    }
+    .icon-icon_sun {
+        color: #ededeb;
+    }
+    .icon-moon-solid {
+        color: #81813b;
+    }
+
+
+}
+
+.dark-theme {
+    $background-color: #383838;
+}
+

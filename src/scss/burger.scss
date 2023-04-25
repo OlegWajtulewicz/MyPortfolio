@@ -14,7 +14,7 @@
         transform: translate(-50%, -50%);
         width: 50px;
         height: 6px;
-        background-color:rgb(0, 0, 0);
+        background-color: #81813b;
         transition: 1s; 
         &:before,
         &:after {
@@ -22,7 +22,7 @@
             position: absolute;
             width: 50px;
             height: 6px;
-            background-color:rgb(0, 0, 0);
+            background-color: #81813b;
             transition: 1s;   
         }   
     }
@@ -33,7 +33,10 @@
         right: 65px;
         font-size: 26px;
         top: 25px;
-        color:rgb(0, 0, 0);
+        color: #81813b;
+        @include _480 {
+            display: none;
+        }
     }
 }
 .burger__item:before {

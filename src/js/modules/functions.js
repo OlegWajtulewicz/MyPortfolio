@@ -17,12 +17,12 @@ export function isWebp() {
 
 
 //preloader
-$(window).on('load', function() {
-    $('#preloader').delay(1).fadeOut(500, function() {
-        $('body').css('overflow','visible');
-        $(this).remove();
-    });
-});
+// $(window).on('load', function() {
+//     $('#preloader').delay(1).fadeOut(200, function() {
+//         $('body').css('overflow','visible');
+//         $(this).remove();
+//     });
+// });
 
 $(window).scroll(function() {
     if ($(this).scrollTop() > 600) {
@@ -40,12 +40,66 @@ $(document).ready(function(){
         let hash = this.hash;
         $('html, body').animate({
           scrollTop: $(hash).offset().top
-        }, 900, function(){
+        }, 500, function(){
           window.location.hash = hash;
         });
       } 
     });
   });
+
+
+
+
+
+  const  themeChangeIcon = document.getElementById("themeChangeIcon");
+ 
+  themeChangeIcon.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      
+      if (document.body.classList.contains('dark-theme')) {
+        
+        themeChangeIcon.classList.remove('icon-moon-solid');
+        themeChangeIcon.classList.add('icon-icon_sun');
+      } else {
+        
+        themeChangeIcon.classList.remove('icon-icon_sun');
+        themeChangeIcon.classList.add('icon-moon-solid');
+      }
+      
+  });  
+
+
+
+
+  // document.addEventListener("DOMContentLoaded", ()=>{
+  //   init()
+  // })
+  // function init() {
+  //   if(localStorage.getItem('theme')) {
+  //     document.documentElement.setAttribute("theme", "dark");
+  //   }
+  //   else {
+  //     document.documentElement.removeAttribute("theme");
+  //   }  
+  // }
+  // const toggleBtn = document.querySelector("#themeChangeIcon");
+
+  // toggleBtn.addEventListener("click", function() {
+  //   if(document.documentElement.hasAttribute("theme")){
+  //     document.documentElement.removeAttribute("theme");
+  //     localStorage.removeItem('theme');
+  //   }
+  //   else{
+  //     document.documentElement.setAttribute("theme", "dark");
+  //     localStorage.setItem('theme', 1);
+  //   }
+  // }); 
+
+
+  
+  
+  
+ 
 
 
 // window.onload = function(){
