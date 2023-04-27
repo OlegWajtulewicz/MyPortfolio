@@ -26,25 +26,31 @@
         display: block;
         position: absolute;
         left: 55px;
-        top: 7px;
+        top: -9px;
         z-index: 20;
         @include _767 {
             left: 20px;
         }
         @include _600 {
-            left: 0;
+            left: 10px;
+            top: -1px;
         }
         svg {
             display: block;
-            height: 75px;
-            width: 100px;
-            &:hover {
-                color:#777773;
+            height: 100px;
+            color: #f1f1ef;
+            @include _600 {
+                height: 85px;
+            }
+            &:hover,
+            &:active {
+                color: var(--logoHover-color);
+                transition: all 1.3s; 
             }
         }
     }
     &__text {
-        color: rgb(160, 160, 157);
+        color: rgb(228, 228, 228);
         z-index: 1;
         text-align: -webkit-right;
         top: 40%;
@@ -240,68 +246,10 @@
             visibility: visible;
             opacity: 1;
           }
-            
-    // &__overlay {
-    //     position: fixed;
-    //     top: -100%;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     z-index: 1 !important;
-    //     //animation: backdrop-animation 3s ease-in-out 1s forwards;
-    //     //animation-delay: -3s !important;
-    //     background-color: rgb(27, 36, 49);
-    //     transition: all 1s;
-            // &.active {
-            //     top: 0;
     }
 }
 h1 {
     text-shadow: 0px 0px 55px 32px black;  
 } 
 
-
-
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: auto;
-    width: 100vw;
-    min-height: 100%;
-    background:rgb(36, 33, 30);
-    z-index: 125;
-    overflow: hidden;
-    transition: 1s cubic-bezier(.3,0,.5,1);
-}
-
-.preloader-head { 
-    //padding-left: 75px;
-
-    // &__text {
-    //     position: fixed;
-    //     display: flex;
-    //     flex-direction: column;
-    //     bottom: 65px;
-    //     font-family: 'Helvetica Now Display';
-    //     color: rgb(255, 255, 255);
-    // }
-    &__svg-icon {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 130px;
-        width: 130px;
-        z-index: 10;
-        background-color: white;
-        svg {
-            height: 20px;
-            width: 20px;
-            z-index: 10;
-            color: white;
-        }
-    }
     
-
-}

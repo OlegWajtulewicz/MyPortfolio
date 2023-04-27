@@ -49,51 +49,7 @@ AOS.init({
 	disable: 'phone',
 });
  
-///////////maps
 
-// function initMap() {
-//   let coordinates = {lat: 52.18576, lng: 20.97114};
-
-//     let  map = new google.maps.Map(document.getElementById('map'), {
-//           zoom: 5,
-//           mapId: "5ed7fc131b7e827c",
-//           center: coordinates,
-//           mapTypeControl: false,
-//           zoomControl: true,
-//           zoomControlOptions: {
-//               position: google.maps.ControlPosition.LEFT_TOP,
-//     },
-//           scaleControl: false,
-//           disableDefaultUI: true,
-//           mapTypeControlOptions: {
-//             style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-//             mapTypeIds: ["roadmap", "terrain"],
-//           },
-//           // zoomControl: boolean,
-//           // scaleControl: boolean,
-//           // streetViewControl: boolean,
-//           // rotateControl: boolean,
-//           // fullscreenControl: boolean
-//           // mapTypeControl: boolean,    
-//       });
-// 	  const marker = new google.maps.Marker({
-// 		position: coordinates,
-// 		map: map,
-// 		draggable: true,
-//     	animation: google.maps.Animation.DROP,
-// 	  });
-// 	  marker.addListener("click", toggleBounce);
-
-
-// function toggleBounce() {
-//   if (marker.getAnimation() !== null) {
-//     marker.setAnimation(null);
-//   } else {
-//     marker.setAnimation(google.maps.Animation.BOUNCE);
-//   }
-// }
-// }
-// window.initMap = initMap;
 
 ////validation
 const form = document.getElementById("form");

@@ -98,7 +98,7 @@
 
 a:hover,
 a:active {
-    color: #757575;
+    color: var(--link-color);
 	transition: all 1.3s;
 } 
 

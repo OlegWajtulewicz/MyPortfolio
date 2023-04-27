@@ -6,18 +6,21 @@
     i {
         position: absolute;
         right: 180px;
+        @include _480 {
+            right: 100px;
+        }
     }
     .icon-icon_sun {
         color: #ededeb;
+        &:hover,
+        &:active {
+            color: var(--link-color);
+            transition: all 1.3s; 
+        }
     }
     .icon-moon-solid {
         color: #81813b;
     }
-
-
 }
 
-.dark-theme {
-    $background-color: #383838;
-}
 
