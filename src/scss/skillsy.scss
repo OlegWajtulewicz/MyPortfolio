@@ -1,0 +1,278 @@
+.skills {
+    background-color: var(--background2-color);
+    padding: 70px 15px 0 15px;
+    
+    .container {
+        max-width: 1040px;
+        margin: 0 auto;
+        @include _1270 {
+            max-width: 1045px;
+        }
+        @include _1170 {
+            max-width: 850px;
+        }
+        @include _979 {
+            max-width: 705px;
+        }
+        @include _767 {
+            max-width: 550px;
+        }
+        @include _600 {
+            max-width: 445px;
+        }
+        @include _480 {
+            max-width: 325px;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: 900;
+            @include _767 {
+                margin-bottom: 40px;
+            }
+        }
+
+        
+        
+    }
+    &__wrapper {
+        max-width: 950px;
+        margin: 60px auto;
+        border-bottom: #dddddd solid 1px;
+        &-bar {
+            max-width: 950px;
+            display: flex;
+            justify-content: space-around;
+            border-left: #DDD solid 1px; 
+            height: 100%;
+            padding: 59px 20px 0 38px;
+            background-image: url('../img/line.png');
+        }
+        @include _979 {
+            gap: 0;
+        }
+        @include _480 {
+            display: none;
+        }
+    }
+    &__item {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 390px;
+        width: 16%;
+        
+        
+    }
+    .title_fz14 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 700;
+        text-shadow: var(--text-shadow);
+        margin-bottom: 15px;
+        
+    }
+    &__ratings {
+        &-line {
+            width: 100%;
+            height: 228px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius:  4px;
+            border: #BBBBBB solid 1px;
+            border-bottom: #BBBBBB solid 1px;
+            &:nth-child(1) {
+                @include _767 {
+                    justify-content: space-around;
+                }
+            }  
+        }
+        &-title {
+            font-size: 16px;
+            text-align: center;
+            font-weight: 700;
+            text-shadow: 0px -1px 0px rgba(170, 170, 170, 0.5);
+            margin-bottom: 15px;
+            @include _979 {
+                margin-bottom: 10px;
+            }
+            @include _767 {
+                transform: rotate(-90deg);
+            } 
+        }
+        &-counter {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: var(--text-shadow);
+        }
+    }
+
+
+
+
+
+    &__libs {
+        min-height: 220px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        place-content: center;
+        gap: 20px;
+        //place-items: start;
+        padding: 5vmin;
+        padding-bottom: 80px;
+        @include _979 {
+            grid-template-columns: 300px;
+            grid-auto-rows: 300px;
+            row-gap: 50px;  
+        }
+        @include _350 {
+            padding-left: 37px;
+        }
+        &-img {
+            margin-bottom: 13px;
+        }
+        .title_fz14 {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+    }
+    &__libs-item {
+        width: 300px;
+        height: 300px;
+        padding-inline: 1ch;
+        padding: 0 25px;
+        background-color: var(--item-color);
+        border-radius: 4px;
+        box-shadow: 0px 0px 13px -1px rgb(197, 196, 197);
+        &:nth-child(1) {
+            padding-block: 15px;
+        }
+        img {
+            padding-inline: 1ch;
+            padding-block: 3ch;  
+        }
+        @include _350 {
+            width: 280px;    
+        }
+    }
+    &__descr {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.skills__item:first-child .skills__ratings-line {
+    background-image: linear-gradient(#b0c8db, #5f83b2);
+    border-color: #8dc5be;
+    background-color: #5f79b2;
+    border: #BBBBBB solid 1px;
+    border-bottom: #BBBBBB solid 1px;
+    height: calc(420px / 100 * 87);
+    animation: appFir 2s 1;
+}
+
+.skills__item:nth-child(2) .skills__ratings-line {
+    border-color: #dddc99;
+    background-color: #df9636;
+    background-image: linear-gradient(#e9ca83, #df8236);
+    border: #BBBBBB solid 1px;
+    border-bottom: #BBBBBB solid 1px;
+    height: calc(420px / 100 * 92);
+    animation: appSec 2s 1;
+}
+
+.skills__item:nth-child(3) .skills__ratings-line {
+    border-color: #ebc0b5;
+    background-color: #e1ae9e;
+    background-image: linear-gradient(#eaf4d6, #9ee1ba);
+    border: #BBBBBB solid 1px;
+    border-bottom: #BBBBBB solid 1px;
+    height: calc(420px / 100 * 76);
+    animation: appThi 2s 1;
+}
+
+.skills__item:nth-child(4) .skills__ratings-line {
+    border-color: #e14949;
+    background-color: #ca4544;
+    background-image: linear-gradient(#e49897, #ca4544);
+    border: #BBBBBB solid 1px;
+    border-bottom: #BBBBBB solid 1px;
+    height: calc(420px / 100 * 89);
+    animation: appFou 2s 1;
+}
+.skills__item:nth-child(5) .skills__ratings-line {
+    border-color: #dcb386;
+    background-image: linear-gradient(#dcba83, #af7b40);
+    border: #BBBBBB solid 1px;
+    border-bottom: #BBBBBB solid 1px;
+    height: calc(420px / 100 * 12);
+    animation: appFou 2s 1;
+}
+.skills__item:nth-child(5) .skills__ratings-line {
+    justify-content: flex-start;
+}
+
+@keyframes appFir {
+	0% {
+		height: 0;
+	}
+	20% {
+		height: 0;
+	}
+	100% {
+		height: calc(350px / 100 * 85);
+	}
+}
+
+@keyframes appSec {
+	0% {
+		height: 0;
+	}
+	20% {
+		height: 0;
+	}
+	100% {
+		height: calc(350px / 100 * 90);
+	}
+}
+
+@keyframes appThi {
+	0% {
+		height: 0;
+	}
+	20% {
+		height: 0;
+	}
+	100% {
+		height: calc(350px / 100 * 70);
+	}
+}
+
+@keyframes appFou {
+	0% {
+		height: 0;
+	}
+	20% {
+		height: 0;
+	}
+	100% {
+		height: calc(350px / 100 * 75);
+	}
+}
+
+@keyframes app {
+	0% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

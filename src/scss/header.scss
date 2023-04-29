@@ -1,7 +1,7 @@
 .promo {
     position: relative;
 	height: 92vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 1.719), rgba(44 43 43 / 70%)), url('../img/main_bg.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 1.719), rgba(44 43 43 / 70%)), url('../img/slider/etna.jpg');  // url('../img/main_bg.webp');
     background-color: var(--background-color);
     background-size: cover;
     background-position: center;
@@ -22,6 +22,7 @@
         box-shadow: inset 0px 1px 4px 0px rgb(0 0 0 / 10%);
         z-index: 10;
     }
+   
     &__svg-icon {
         display: block;
         position: absolute;
@@ -67,6 +68,7 @@
         font-weight: 900;
         font-family: 'Filson Pro' !important;
         margin-bottom: 10px;
+        text-shadow: -5px -2px 14px rgba(170, 170, 170, 0.5);
         @include _1270 {
             font-size: 120px;
         }
