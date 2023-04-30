@@ -74,6 +74,8 @@ if (response.status === 200) {
 
 
 
+
+
 //ScrollOnClick (Navigation)
 let link = document.querySelectorAll('._goto-block');
 if (link) {

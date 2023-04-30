@@ -6,17 +6,17 @@
     &__fz60 {
         font-size: 60px;
         font-weight: 900;
-        text-shadow: 0px -1px 0px rgba(170, 170, 170, 0.5);
+        text-shadow: var(--text-shadow);
     } 
     &_fz36 {
         font-size: 36px;
         font-weight: 900;
         line-height: 48px;
-        text-shadow: 0px -1px 0px rgba(170, 170, 170, 0.5);
+        text-shadow: var(--text-shadow);
     }
     &_fz24 {
         font-size: 24px;
         font-weight: 400;
-        text-shadow: 0px -1px 0px rgba(170, 170, 170, 0.5);
+        text-shadow: var(--text-shadow);
     }
 }

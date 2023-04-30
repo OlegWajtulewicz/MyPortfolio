@@ -9,9 +9,17 @@
     justify-content: center;
     background: #ffffff;
     z-index: 120;
+    img {
+        height: 20px;
+        width: 20px;
+    }
 }
 #preloader.hide-preloader {
     animation: hidePreloader 1s;
+    img {
+        height: 20px;
+        width: 20px;
+    }
 }
 
 #preloader.preloader-hidden {

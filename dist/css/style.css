@@ -6099,18 +6099,18 @@ h6 {
 .title__fz60 {
   font-size: 60px;
   font-weight: 900;
-  text-shadow: 0px -1px 0px rgba(170, 170, 170, 0.5);
+  text-shadow: var(--text-shadow);
 }
 .title_fz36 {
   font-size: 36px;
   font-weight: 900;
   line-height: 48px;
-  text-shadow: 0px -1px 0px rgba(170, 170, 170, 0.5);
+  text-shadow: var(--text-shadow);
 }
 .title_fz24 {
   font-size: 24px;
   font-weight: 400;
-  text-shadow: 0px -1px 0px rgba(170, 170, 170, 0.5);
+  text-shadow: var(--text-shadow);
 }
 
 .promo {
@@ -6125,7 +6125,8 @@ h6 {
   box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
 }
 .promo__header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   background: var(--footer-color) !important;
   height: 90px;
   border-bottom: 2px solid #777773;
@@ -6136,7 +6137,7 @@ h6 {
 }
 .promo__svg-icon {
   display: block;
-  position: absolute;
+  position: fixed;
   left: 55px;
   top: -9px;
   z-index: 20;
@@ -6266,7 +6267,7 @@ h6 {
 .menu {
   position: fixed;
   top: 0;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -6415,8 +6416,8 @@ h1 {
 
 .about {
   padding: 230px;
-  padding-top: 70px;
-  padding-bottom: 10%;
+  padding-top: 100px;
+  padding-bottom: 120px;
   background-color: var(--background-color);
   border-top: 1px solid #777773;
 }
@@ -6504,7 +6505,7 @@ h1 {
 .about-skills {
   position: relative;
   background-color: var(--background2-color);
-  padding: 50px;
+  padding: 80px 50px 30px 50px;
   padding-top: 80px;
 }
 @media (max-width: 600px) {
@@ -6765,7 +6766,7 @@ a:active {
 
 .portfolio {
   background-color: var(--background-color);
-  padding: 70px 15px 100px 15px;
+  padding: 140px 15px 100px 15px;
   border-bottom: 1px solid rgba(119, 119, 115, 0.3294117647);
   -webkit-box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
   -moz-box-shadow: 0px 41px 38px 11px rgba(224, 224, 224, 0.42);
@@ -6906,7 +6907,7 @@ a:active {
 
 .skills {
   background-color: var(--background2-color);
-  padding: 70px 15px 0 15px;
+  padding: 70px 15px 40px 15px;
 }
 .skills .container {
   max-width: 1040px;
@@ -7196,7 +7197,7 @@ a:active {
 .slider {
   background-color: var(--background-color);
   padding: 50px;
-  padding-top: 70px;
+  padding-top: 140px;
   padding-bottom: 100px;
   min-height: 90vh;
   border-bottom: 1px solid rgba(119, 119, 115, 0.3294117647);
@@ -7393,7 +7394,7 @@ a:active {
   min-height: 100vh;
 }
 .contacts__top {
-  padding-top: 80px;
+  padding-top: 140px;
   position: relative;
   max-width: 75%;
 }
@@ -7867,9 +7868,17 @@ a:active {
   background: #ffffff;
   z-index: 120;
 }
+#preloader img {
+  height: 20px;
+  width: 20px;
+}
 
 #preloader.hide-preloader {
   animation: hidePreloader 1s;
+}
+#preloader.hide-preloader img {
+  height: 20px;
+  width: 20px;
 }
 
 #preloader.preloader-hidden {
