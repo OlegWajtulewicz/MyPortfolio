@@ -42,14 +42,14 @@
 	<meta name="theme-color" content="#ffffff">
 
 	
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20230501163504" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230501163504">
 </head>
 	<body>
 		<div class="promo__header top" id="header">
-    <div class="promo__svg-icon " id="up">
-        <!-- <img src="../img/logo1-svg-svg.png" alt=""> -->
-        <a href="https://vaitulevichaleh.com">
+    <div class="promo__svg-icon" id="up">
+        <!-- <picture><source srcset="../img/logo1-svg-svg.webp" type="image/webp"><img src="../img/logo1-svg-svg.png" alt=""></picture> -->
+        <a href="https://vaitulevichaleh.com" >
             <svg width="90" height="117" viewBox="0 0 90 117" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="47.5" cy="62.5" r="42.5" fill="black"/>
                 <path d="M0.904 93L31.336 25.8H40.84L71.368 93H61.288L34.12 31.176H37.96L10.792 93H0.904ZM13.864 76.2L16.456 68.52H54.28L57.064 76.2H13.864Z" />
@@ -105,7 +105,7 @@
         
         
         
-        <div class="menu">
+        <div class="menu" >
             <div class="menu__block">
                 
                 <nav class="menu__body">
@@ -161,27 +161,27 @@
 
         <div class="portfolio__wrapper">
             <a href="https://olegwajtulewicz.github.io" class="portfolio__item">
-                <img src="img/works/uber.jpg" alt="uber">
+                <picture><source srcset="img/works/uber.webp" type="image/webp"><img src="img/works/uber.jpg" alt="uber"></picture>
             </a>
 
             <a href="http://test.vaitulevichaleh.com" class="portfolio__item">
-                <img src="img/works/pulse.jpg" alt="pulse">
+                <picture><source srcset="img/works/pulse.webp" type="image/webp"><img src="img/works/pulse.jpg" alt="pulse"></picture>
             </a>
 
             <a href="https://test.prengi.vaitulevichaleh.com" class="portfolio__item">
-                <img src="img/works/prengi!.jpg" alt="prengi">
+                <picture><source srcset="img/works/prengi!.webp" type="image/webp"><img src="img/works/prengi!.jpg" alt="prengi"></picture>
             </a>
 
             <a href="" class="portfolio__item vertical">
-                <img src="img/works/plans.jpg" alt="plans">
+                <picture><source srcset="img/works/plans.webp" type="image/webp"><img src="img/works/plans.jpg" alt="plans"></picture>
             </a>
 
             <a href="" class="portfolio__item">
-                <img src="img/works/ipad.jpg" alt="ipad">
+                <picture><source srcset="img/works/ipad.webp" type="image/webp"><img src="img/works/ipad.jpg" alt="ipad"></picture>
             </a>
 
             <a href="https://test.portfolio.vaitulevichaleh.com" class="portfolio__item horizontal">
-                <img src="img/works/main_logo.jpg" alt="portfolio">
+                <picture><source srcset="img/works/main_logo.webp" type="image/webp"><img src="img/works/main_logo.jpg" alt="portfolio"></picture>
             </a>
         </div>
     </div>
@@ -291,25 +291,38 @@
     </div>
     <div class="gradient-white">
     </div>
-    <a href="#up" class="pageup">
+    <!-- <a href="#up" class="pageup">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L19.7071 14.2929C20.0976 14.6834 20.0976 15.3166 19.7071 15.7071C19.3166 16.0976 18.6834 16.0976 18.2929 15.7071L12 9.41421L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071Z" />
             </svg>
-     </a>
+     </a> -->
+
+     <div class="btn-up btn-up_hide">
+        <svg class="btn-up-icon" role="img" aria-label="Прокрутить страницу к началу">
+          <use xlink:href="#arrow-up-short"></use>
+        </svg>
+      </div>
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="arrow-up-short" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+        </symbol>
+      </svg>
 
 </footer>
 
 
 		
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230501163504"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?_v=20230501163504"></script>
 
-<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsicrCLCWQmu8DQqoSw_pu0yAD0LvjR58&callback=initMap"></script> -->
-<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTJZsAsqhEwZz9wqVMZZGhL1aN9yn4eE"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-<script src="../js/app.min.js"></script>
+<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsicrCLCWQmu8DQqoSw_pu0yAD0LvjR58&callback=initMap&_v=20230501163504"></script> -->
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTJZsAsqhEwZz9wqVMZZGhL1aN9yn4eE&_v=20230501163504"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230501163504"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js?_v=20230501163504"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js?_v=20230501163504"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js?_v=20230501163504"></script>
+<script src="../js/app.min.js?_v=20230501163504"></script>
 	</body>
 </html>

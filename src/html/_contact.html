@@ -64,3 +64,24 @@
       </div>  
     </div>
 </section>
+<script>
+    const form = document.getElementById("form");
+form.addEventListener("submit", () => {
+e.preventDefault();
+const formData = new FormData(form);
+axios
+.post("https://usebasin.com/f/5013a8a412fc", formData, options)
+.then((response) => {
+if (response.status === 200) {
+	form.classList.add('_sending');
+	form.reset();
+	console.log("success");
+} else {
+	console.log("fail");
+	alert("Ошибка");
+	form.classList.remove('_sending');
+}
+})
+.catch((error) => console.log(error));
+});
+</script>

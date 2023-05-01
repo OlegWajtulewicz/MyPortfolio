@@ -52,77 +52,131 @@ AOS.init({
 
 
 ////validation
-const form = document.getElementById("form");
-form.addEventListener("submit", () => {
-e.preventDefault();
-const formData = new FormData(form);
-axios
-.post("https://usebasin.com/f/5013a8a412fc", formData, options)
-.then((response) => {
-if (response.status === 200) {
-	form.classList.add('_sending');
-	form.reset();
-	console.log("success");
-} else {
-	console.log("fail");
-	alert("Ошибка");
-	form.classList.remove('_sending');
-}
-})
-.catch((error) => console.log(error));
-});
+// const form = document.getElementById("form");
+// form.addEventListener("submit", () => {
+// e.preventDefault();
+// const formData = new FormData(form);
+// axios
+// .post("https://usebasin.com/f/5013a8a412fc", formData, options)
+// .then((response) => {
+// if (response.status === 200) {
+// 	form.classList.add('_sending');
+// 	form.reset();
+// 	console.log("success");
+// } else {
+// 	console.log("fail");
+// 	alert("Ошибка");
+// 	form.classList.remove('_sending');
+// }
+// })
+// .catch((error) => console.log(error));
+// });
 
 
 
+// ScrollOnClick (Navigation)
+// let link = document.querySelectorAll('._goto-block');
+// if (link) {
+// 	let blocks = [];
+// 	for (let index = 0; index < link.length; index++) {
+// 		let el = link[index];
+// 		let block_name = el.getAttribute('href').replace('#', '');
+// 		if (block_name != '' && !~blocks.indexOf(block_name)) {
+// 			blocks.push(block_name);
+// 		}
+// 		el.addEventListener('click', function (e) {
+// 			if (document.querySelector('.menu__body._active')) {
+// 				menu_close();
+// 				body_lock_remove(500);
+// 			}
+// 			let target_block_class = el.getAttribute('href').replace('');
+// 			let target_block = document.querySelector('.' + target_block_class);
+// 			_goto(target_block, 300);
+// 			e.preventDefault();
+// 		})
+// 	}
 
+// 	window.addEventListener('scroll', function (el) {
+// 		let old_current_link = document.querySelectorAll('._goto-block._active');
+// 		if (old_current_link) {
+// 			for (let index = 0; index < old_current_link.length; index++) {
+// 				let el = old_current_link[index];
+// 				el.classList.remove('_active');
+// 			}
+// 		}
+// 		for (let index = 0; index < blocks.length; index++) {
+// 			let block = blocks[index];
+// 			let block_item = document.querySelector('.' + block);
+// 			if (block_item) {
+// 				let block_offset = offset(block_item).top;
+// 				let block_height = block_item.offsetHeight;
+// 				if ((pageYOffset > block_offset - window.innerHeight / 3) && pageYOffset < (block_offset + block_height) - window.innerHeight / 3) {
+// 					let current_links = document.querySelectorAll('._goto-block[href="#' + block + '"]');
+// 					for (let index = 0; index < current_links.length; index++) {
+// 						let current_link = current_links[index];
+// 						current_link.classList.add('_active');
+// 					}
+// 				}
+// 			}
+// 		}
+// 	})
+// }
 
-//ScrollOnClick (Navigation)
-let link = document.querySelectorAll('._goto-block');
-if (link) {
-	let blocks = [];
-	for (let index = 0; index < link.length; index++) {
-		let el = link[index];
-		let block_name = el.getAttribute('href').replace('#', '');
-		if (block_name != '' && !~blocks.indexOf(block_name)) {
-			blocks.push(block_name);
+const btnUp = {
+	el: document.querySelector('.btn-up'),
+	scrolling: false,
+	show() {
+	  if (this.el.classList.contains('btn-up_hide') && !this.el.classList.contains('btn-up_hiding')) {
+		this.el.classList.remove('btn-up_hide');
+		this.el.classList.add('btn-up_hiding');
+		window.setTimeout(() => {
+		  this.el.classList.remove('btn-up_hiding');
+		}, 300);
+	  }
+	},
+	hide() {
+	  if (!this.el.classList.contains('btn-up_hide') && !this.el.classList.contains('btn-up_hiding')) {
+		this.el.classList.add('btn-up_hiding');
+		window.setTimeout(() => {
+		  this.el.classList.add('btn-up_hide');
+		  this.el.classList.remove('btn-up_hiding');
+		}, 300);
+	  }
+	},
+	addEventListener() {
+	  // при прокрутке окна (window)
+	  window.addEventListener('scroll', () => {
+		const scrollY = window.scrollY || document.documentElement.scrollTop;
+		if (this.scrolling && scrollY > 0) {
+		  return;
 		}
-		el.addEventListener('click', function (e) {
-			if (document.querySelector('.menu__body._active')) {
-				menu_close();
-				body_lock_remove(500);
-			}
-			let target_block_class = el.getAttribute('href').replace('');
-			let target_block = document.querySelector('.' + target_block_class);
-			_goto(target_block, 300);
-			e.preventDefault();
-		})
+		this.scrolling = false;
+		// если пользователь прокрутил страницу более чем на 200px
+		if (scrollY > 500) {
+		  // сделаем кнопку .btn-up видимой
+		  this.show();
+		} else {
+		  // иначе скроем кнопку .btn-up
+		  this.hide();
+		}
+	  });
+	  // при нажатии на кнопку .btn-up
+	  document.querySelector('.btn-up').onclick = () => {
+		this.scrolling = true;
+		this.hide();
+		// переместиться в верхнюю часть страницы
+		window.scrollTo({
+		  top: 0,
+		  left: 0,
+		  behavior: 'smooth'
+		});
+	  }
 	}
+  }
 
-	window.addEventListener('scroll', function (el) {
-		let old_current_link = document.querySelectorAll('._goto-block._active');
-		if (old_current_link) {
-			for (let index = 0; index < old_current_link.length; index++) {
-				let el = old_current_link[index];
-				el.classList.remove('_active');
-			}
-		}
-		for (let index = 0; index < blocks.length; index++) {
-			let block = blocks[index];
-			let block_item = document.querySelector('.' + block);
-			if (block_item) {
-				let block_offset = offset(block_item).top;
-				let block_height = block_item.offsetHeight;
-				if ((pageYOffset > block_offset - window.innerHeight / 3) && pageYOffset < (block_offset + block_height) - window.innerHeight / 3) {
-					let current_links = document.querySelectorAll('._goto-block[href="#' + block + '"]');
-					for (let index = 0; index < current_links.length; index++) {
-						let current_link = current_links[index];
-						current_link.classList.add('_active');
-					}
-				}
-			}
-		}
-	})
-}
+  btnUp.addEventListener();  
 
 
+
+  
 

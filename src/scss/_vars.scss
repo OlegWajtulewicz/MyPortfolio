@@ -18,7 +18,7 @@
     --swiper-bar: rgba(116, 116, 116, 0.62);
     --logoHover-color: #ffffff;
     --text-shadow: 0px -1px 0px rgba(170, 170, 170, 0.5);
-
+    --upColorHover: #212529;
 
 }.dark-theme {
     /* colors  */
@@ -40,6 +40,7 @@
     --swiper-bar: rgba(116, 116, 116, 0.62);
     --logoHover-color: #e4f047;
     --text-shadow: 0px -1px 0px rgb(82 80 80 / 72%);
+    --upColorHover: #ebebeb;
 }
 
 // @media (prefers-color-scheme: dark) {

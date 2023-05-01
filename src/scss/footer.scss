@@ -43,38 +43,38 @@
     }
 }
  
-.pageup {
-    //display: none;
-    position: fixed;
-    bottom: 22px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-	border-radius: 100%;
-	transition: all 1s;
+// .pageup {
+//     //display: none;
+//     position: fixed;
+//     bottom: 22px;
+//     right: 10px;
+//     width: 40px;
+//     height: 40px;
+// 	border-radius: 100%;
+// 	transition: all 1s;
 	
-    svg {
-        //position: relative;
-        display: block;
-        width: 40px;
-		height: 40px;
-        z-index: 15;
-        background-color:rgba(199, 199, 199, 0.26);
-        border-radius: 100%;
-        box-shadow: 0px 0px 13px -1px rgb(197, 196, 197);
-		color: #757571;
-		transition: all .3s;
-		-webkit-transition: color .3s;
-		&:hover {
-			color: var(--swiper-arrow);
-	  	}
-		&:active {
-			color: #757575;
-		} 
-    }
+//     svg {
+//         //position: relative;
+//         display: block;
+//         width: 40px;
+// 		height: 40px;
+//         z-index: 15;
+//         background-color:rgba(199, 199, 199, 0.26);
+//         border-radius: 100%;
+//         box-shadow: 0px 0px 13px -1px rgb(197, 196, 197);
+// 		color: #757571;
+// 		transition: all .3s;
+// 		-webkit-transition: color .3s;
+// 		&:hover {
+// 			color: var(--swiper-arrow);
+// 	  	}
+// 		&:active {
+// 			color: #757575;
+// 		} 
+//     }
 	
    
-}
+// }
  
 .footer .left {
     float: left !important;
@@ -104,4 +104,48 @@ a:active {
 
 
 
+
+.btn-up {
+    position: fixed;
+    background-color: rgba(199, 199, 199, 0.26);
+    right: 30px;
+    bottom: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //box-shadow: 0px 0px 13px -1px rgb(197, 196, 197);
+    transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+    color: #757571;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    transform: translateY(0);
+    @include _480 {
+        right: 10px;
+    }
+  }
+
+  .btn-up_hide {
+        display: none;
+  }
+
+  .btn-up_hiding {
+        opacity: 0;
+        transform: translateY(100px);
+  }
+
+  .btn-up-icon {
+        width: 40px;
+        height: 40px;
+        fill: currentcolor;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+        color: var(--upColorHover);
+        transition: all .5s;
+    }
+  }
 
