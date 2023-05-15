@@ -135,6 +135,11 @@ window.addEventListener('DOMContentLoaded', () => {
             }); 
             })}) 
 
+
+            $('.modal__close').on('click', function() {
+              $('.overlay, #thanks').fadeOut('slow');
+            });
+
             
             
            

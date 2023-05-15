@@ -42,13 +42,13 @@
 	<meta name="theme-color" content="#ffffff">
 
 	
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20230501163504" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230501163504">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 	<body>
 		<div class="promo__header top" id="header">
     <div class="promo__svg-icon" id="up">
-        <!-- <picture><source srcset="../img/logo1-svg-svg.webp" type="image/webp"><img src="../img/logo1-svg-svg.png" alt=""></picture> -->
+        <!-- <img src="../img/logo1-svg-svg.png" alt=""> -->
         <a href="https://vaitulevichaleh.com" >
             <svg width="90" height="117" viewBox="0 0 90 117" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="47.5" cy="62.5" r="42.5" fill="black"/>
@@ -188,8 +188,7 @@
             <div class="title title__fz14 contacts__text-bottom">
                 Or leave your details and I will write to you myself:
             </div>
-
-            <form id="form" action="https://usebasin.com/f/5013a8a412fc" class="contacts__form form form__body" method="POST" enctype="multipart/form-data">
+            <form id="form" class="contacts__form" action="https://usebasin.com/f/5013a8a412fc"  method="POST" enctype="multipart/form-data" data-basin-form>
                 <div class="contacts__input form__item">
                     <input required name="name" type="text" class="form__input">
                     <label for="name" class="form__label">Name</label>
@@ -197,46 +196,53 @@
                 <div class="contacts__input form__item">
                     <input required name="email" type="email" class="form__input">
                     <label for="email">Email</label>
-                </div>
-
+                </div>           
                 <div class="contacts__textarea form__item">
-                    <textarea name="message" id="formMessage" class="form__input"></textarea>
+                    <textarea name="message" id="message" class="form__input"></textarea>
                     <label for="message" class="form__label">Message</label>
                 </div>
                 <div class="contacts__triggers">
-                    <button type="submit" class="main-btn form__button">Send message</button>
-                    <!-- <div class="contacts__policy">
+                    <button type="submit"  class="main-btn">Send message</button>
+                    <!-- <div class="contacts__policy"   >
                         <input required type="checkbox">
                     <span>I agree with <a href="#policy" data-modal="policy" class="scroll-off">  the privacy policy.</a> </span>
                     </div> -->                    
-                </div>
+                </div> 
             </form>
-
         </div>
       </div>  
-    </div>
+    </div>            
 </section>
+
 <script>
-    const form = document.getElementById("form");
+
+const form = document.getElementById("form");
 form.addEventListener("submit", () => {
 e.preventDefault();
 const formData = new FormData(form);
 axios
 .post("https://usebasin.com/f/5013a8a412fc", formData, options)
 .then((response) => {
-if (response.status === 200) {
-	form.classList.add('_sending');
-	form.reset();
-	console.log("success");
+if (response.status === 200) {	
+	form.reset();	
+    console.log("success");
 } else {
 	console.log("fail");
-	alert("Ошибка");
-	form.classList.remove('_sending');
+	alert("Ошибка");	
 }
 })
 .catch((error) => console.log(error));
 });
 </script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js" integrity="sha512-XZEy8UQ9rngkxQVugAdOuBRDmJ5N4vCuNXCh8KlniZgDKTvf7zl75QBtaVG1lEhMFe2a2DuA22nZYY+qsI2/xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
 			
 		</main>
 		
@@ -280,16 +286,23 @@ if (response.status === 200) {
 
 </footer>
 
-		
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230501163504"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?_v=20230501163504"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js" integrity="sha512-XZEy8UQ9rngkxQVugAdOuBRDmJ5N4vCuNXCh8KlniZgDKTvf7zl75QBtaVG1lEhMFe2a2DuA22nZYY+qsI2/xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 
-<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsicrCLCWQmu8DQqoSw_pu0yAD0LvjR58&callback=initMap&_v=20230501163504"></script> -->
-<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTJZsAsqhEwZz9wqVMZZGhL1aN9yn4eE&_v=20230501163504"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230501163504"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js?_v=20230501163504"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js?_v=20230501163504"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js?_v=20230501163504"></script>
-<script src="../js/app.min.js?_v=20230501163504"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsicrCLCWQmu8DQqoSw_pu0yAD0LvjR58&callback=initMap"></script> -->
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTJZsAsqhEwZz9wqVMZZGhL1aN9yn4eE"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script> -->
+<script src="../js/app.min.js"></script>
 	</body>
 </html>

@@ -90,6 +90,21 @@
     transform: translateX(-50%);
     right: 49%;
     opacity: 1;
+    @include _767 {
+        right: 48%;
+    }
+    @include _480 {
+        right: 46%;
+        top: 2%;
+    }
+    @include _400 {
+        right: 43%;
+        top: 1%;
+    }
+    @include _350 {
+        right: 44%;
+        top: 1%; 
+    }
     
 }
 .scroll-to-top {
