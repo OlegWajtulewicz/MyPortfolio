@@ -15,7 +15,7 @@ export function isWebp() {
 	});
 }
 
-
+//////////////////////////////preloader////////////////////////////////////////////
 
 window.onload = function() {
   let preloader = document.getElementById('preloader');
@@ -40,7 +40,7 @@ window.onload = function() {
 //   });
 // });
 
-
+///////////////////////////////////////////////////
 
 $(window).scroll(function() {
     if ($(this).scrollTop() > 600) {
@@ -50,7 +50,7 @@ $(window).scroll(function() {
     }
 }); 
 
-  
+ //////////////////dark-theme/////////////////////////////////////////////// 
 
   (function () {
     const docBody         = document.body;
@@ -105,7 +105,7 @@ $(window).scroll(function() {
   
   })();
 
-  
+ /////////////////////burger////////////////////////////////////////////////////// 
 
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),

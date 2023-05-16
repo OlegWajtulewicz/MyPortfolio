@@ -121,15 +121,24 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(300px, 1fr));
         place-content: center;
-        gap: 20px;
+        gap: 30px;
         //place-items: start;
         padding: 5vmin;
         padding-bottom: 80px;
+        @include _1170 {
+            gap: 20px;
+        }
         @include _979 {
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            grid-auto-rows: 300px;
+            gap: 70px;     
+        }
+        @include _767 {
             grid-template-columns: 300px;
             grid-auto-rows: 300px;
             row-gap: 50px;  
         }
+
         @include _350 {
             padding-left: 37px;
         }
@@ -158,6 +167,22 @@
         }
         @include _350 {
             width: 280px;    
+        }
+        &:nth-child(4) {
+            img {
+                width: 50px;
+                margin-left: 15px;
+            }
+        }
+        &:nth-child(5) {
+            img {
+                width: 90px;
+            }
+        }
+        &:nth-child(6) {
+            img {
+                width: 90px;
+            }
         }
     }
     &__descr {
